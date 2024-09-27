@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舞way</title>
+    <meta name="description" content="舞way familyカラオケ&PUB">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- js -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+    <script src="./google-calendar/index.global.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events:'yitengnuan@gmail.com',
+        googleCalendarApiKey: 'AIzaSyBGTNU8m8_dTkVSEzJ74mKBCvVW1kAJiIQ',
+
+        eventClick: function(info) {
+            info.jsEvent.preventDefault();
+        },
+        locale: 'ja',
+        dayCellContent: function(arg){
+		return arg.date.getDate();
+	    },
+        headerToolbar:{
+            start:"prev",
+            center:"title",
+            end:"next",
+        },
+        height:"auto",
+        eventDidMount: (e)=>{
+            tippy(e.el, {
+            content: e.event.title,
+            });
+        }, 
+        
+        // navLinks: true, 
+        // showNonCurrentDates: false,
+
+
+    });
+    calendar.render();
+    });
+    </script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>   
+
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+            <p class="title_pc pc"><a href="#"><span>舞</span>WAY</a></p>
+
+            <div class="number pc">
+                <p>ご予約、お問い合わせはこちらから</p>
+                <p class="p2">000-0000-0000</p>
+            </div>
+
+            <p class="event_jump"><a href="#イベントカレンダー">イベントカレンダー</a></p>
+
+        <a href="tel:000-0000-0000" class="phon_icon sp"><img src="./image/phon.png" alt="電話"></a>
+
+        <div class="logo sp">
+            <div class="nav">
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+
+                <nav class="nav_content">
+                    <ul class="nav_list">
+                        <li><a class="nav_item" href="#">ホーム</a></li>
+                        <li class="nav_item"><a href="#イベントカレンダー" class="nav_link">イベントカレンダー</a></li>
+                        <li class="nav_item"><a href="#店舗情報">店舗情報</a></li>
+                        <li class="nav_item"><a href="#アクセス">アクセス</a></li>
+                        <li class="nav_item"><a href="#メニュー">メニュー表</a></li>
+                    </ul>
+
+                    <div class="hum2">
+                        <div class="title">
+                            <h1>舞</h1>
+            
+                            <div class="title2_3">
+                                <p class="title2">WAY</p>
+                                <p class="title3">マイウェイ</p>
+                            </div>
+                        </div>
+                        
+                        <ul>
+                            <li>昼：11:00~16:00 <br>
+                                夜：19:00~23:00</li>
+
+                            <li>定休日：日曜日、月曜日</li>
+                            <li class="hum_phon"><a href="tel:000-0000-0000">000-0000-0000</a></li>
+                        </ul>
+
+                        <div class="fot_lust ">
+                            <div><a href="https://www.instagram.com/my_way.405?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./image/icons8-インスタグラム-50のコピー.png" alt=""></a></div>
+        
+                            <img src="./image/white 2.png" alt="" class="fot_ilust">
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <!-- セクション1 -->
+        <section class="section1">
+
+            <div class="photo_bg">
+                <p class="logo_white"><img src="./image/white.png" alt="logo"></p>
+            </div>
+            
+            <div class="title">
+                <h1>舞</h1>
+
+                <div class="title2_3">
+                    <p class="title2">WAY</p>
+                    <p class="title3">マイウェイ</p>
+                </div>
+            </div>
+
+                <div class="section1_text">
+                    <p class="text">さいたま市にある<span>プロ歌手絶賛の音響</span>を持つ、<br class="sp">
+                        カラオケ喫茶　舞WAY（マイウェイ）<br>
+                        お客様にとって家族の様なお店を目指しています。
+                    </p>
+
+                    <div class="sec1_pc">
+                        <p class="sec1_photo1 pc"><img src="./image/myway1.jpg" alt="店外"></p>
+
+                        <div class="list_flex">
+                            <ul>
+                                <li>・ホッと一息できるお店</li>
+                                <li>・温かく迎えてくれる心温まるお店</li>
+                                <li>・楽しいひと時を過ごせるお店</li>
+                            </ul>
+
+                            <p class="text_lust pc">ぜひ一度、遊びに来て下さい！</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text_lust sp">ぜひ一度、遊びに来て下さい！</p>
+
+                <p class="sec1_photo1 sp"><img src="./image/myway1.jpg" alt="店外"></p>
+                <p class="sec1_photo2 sp"><img src="./image/myway3.png" alt="酒"></p>
+        </section>
+
+    <!-- セクション2 -->
+        <section class="section2 sp">
+
+            <div class="point1 sp">
+                <div class="deco"></div>
+            
+                <div class="text_all">
+                    <p class="tag">POINT</p>
+                    <h2>こだわりの音響設備</h2>
+
+                    <p class="point1_text">プロ歌手も絶賛する迫力のある音響システム！<br>
+                        音響はどこにも負けない自信があります。<br>
+                        ぜひ一度、体験して見て下さい！
+                    </p>
+                </div>
+            </div>
+
+            <div class="point2 sp">
+                <div class="deco"></div>
+                
+                <div class="text_all">
+                    <p class="tag">POINT</p>
+                    <h2>定期的な予約制イベント</h2>
+
+                    <p class="point2_text">毎月2,3回（土曜日）予約制のイベント開催！<br>
+                        歌手のライブイベントや、お客様感謝デーなど<br>
+                        様々。皆様のご参加お待ちしております！
+                    </p>
+                </div>
+            </div>
+
+            <!-- <div class="point_info1 sp"><p>イベントのみ持ち込み可能！</p></div>
+
+            <div class="point_info2 sp"><p>ご予約お待ちしております！</p></div> -->
+        </section>
+        
+        <section class="section2 pc">
+            <div class="pc_point1_text">
+                <p class="tag">POINT</p>
+                <h2>こだわりの音響設備</h2>
+
+                <p class="point1_text">プロ歌手も絶賛する迫力のある音響システム！<br>
+                    音響はどこにも負けない自信があります。<br>
+                    ぜひ一度、体験して見て下さい！
+                </p>
+            </div>
+
+            <div class="pc_point2_text">
+                <p class="tag">POINT</p>
+                <h2>定期的な予約制イベント</h2>
+
+                <p class="point2_text">毎月2,3回（土曜日）予約制のイベント開催！<br>
+                    歌手のライブイベントや、お客様感謝デーなど<br>
+                    様々。皆様のご参加お待ちしております！
+                </p>
+            </div>
+        </section>
+
+        <div class="pc"><p class="deco"></p></div>
+
+        <div class="slider sp">
+            <div><img src="./image/myway.jpg" alt=""></div>
+            <div><img src="./image/myway1.jpg" alt=""></div>
+            <div><img src="./image/myway11.jpg" alt=""></div>
+            <div><img src="./image/myway2.jpg" alt=""></div>
+            <div><img src="./image/myway3.png" alt=""></div>
+            <div><img src="./image/myway4.png" alt=""></div>
+            <div><img src="./image/myway5.png" alt=""></div>
+        </div>
+
+        <div class="slider2 pc">
+            <div><img src="./image/myway.jpg" alt=""></div>
+            <div><img src="./image/myway1.jpg" alt=""></div>
+            <div><img src="./image/myway11.jpg" alt=""></div>
+            <div><img src="./image/myway2.jpg" alt=""></div>
+            <div><img src="./image/myway3.png" alt=""></div>
+            <div><img src="./image/myway4.png" alt=""></div>
+            <div><img src="./image/myway5.png" alt=""></div>
+        </div>
+
+        <!-- セクション6 -->
+        <section class="section6">
+            <p class="tag2">EVENT</p>
+            <h2 id="イベントカレンダー">イベントカレンダー</h2>
+
+            <div id="calendar"></div>
+            <!-- <p class="calender"><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FTokyo&bgcolor=%23ffffff&title=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC&showPrint=0&showTz=0&src=eWl0ZW5nbnVhbkBnbWFpbC5jb20&color=%23039BE5" style="border-width:0" width="90%" height="500" frameborder="0" scrolling="no"></iframe></p> -->
+
+            <p class="calendar_vac">定休日　(日曜日、月曜日)</p>
+
+            <p class="calender_phon"><a href="tel:000-0000-0000">予約：000-0000-0000</a></p>
+
+            <p class="calender_text">イベント予約や貸切などお問合せは、お電話にて承りますのでお気軽にご相談ください！</p>
+        </section>
+
+        <!-- セクション3 -->
+        <section class="section3">
+            <p class="tag2">INFOMATION</p>
+            <h2 id="店舗情報">店舗情報</h2>
+            
+            <div class="info1_pc">
+                <p class="sec3_photo1"><img src="./image/myway1.jpg" alt=""></p>
+
+                <div class="info_pc">
+                    <dl>
+                        <dt>営業時間</dt>
+                        <dd>昼: 11:00~16:00 <br>
+                            夜: 19:00~23:00</dd>
+                    </dl>
+                    <dl>
+                        <dt>定休日</dt>
+                        <dd>日曜日、月曜日</dd>
+                    </dl>
+                    <dl>
+                        <dt>電話番号</dt>
+                        <dd>000-0000-0000</dd>
+                    </dl>
+                    <dl>
+                        <dt>お支払い方法</dt>
+                        <dd>現金のみ</dd>
+                    </dl>
+                </div>
+            </div>
+
+                <div class="info1_pc">
+                    <p class="sec3_photo1"><img src="./image/map.png" alt="店内マップ"></p>
+
+                    <div class="info_pc">
+                        <dl>
+                            <dt>座席数</dt>
+                            <dd>34席</dd>
+                        </dl>
+                        <dl>
+                            <dt>貸切</dt>
+                            <dd>可能(お電話にて承ります)</dd>
+                        </dl>
+                    </div>
+                </div>
+
+
+            <div class="access">
+                <h2 id="アクセス">アクセス</h2>
+                <p>埼玉県さいたま市北区1丁目12-1　 <br class="sp">
+                    店前駐車場有り(4台)
+                </p>
+
+                <ul>
+                    <li>電車：ニューシャトル「加茂宮駅」から徒歩8分</li>
+                    <li>バス：「北区役所入口」から徒歩1分</li>
+                </ul>
+
+                <div class="goglemap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.668773225403!2d139.61653267646014!3d35.93060671623381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c6a537454323%3A0x71652013c22100ab!2zZmFtaWx544Kr44Op44Kq44KxJlB1YiDoiJ7vvLfvvKHvvLk!5e0!3m2!1sja!2sjp!4v1726112784684!5m2!1sja!2sjp" width="80%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="menu">
+                <h2 id="メニュー">メニュー表</h2>
+
+                <div class="slider-menu">
+                    <div><img src="./image/menu 1.png" alt=""></div>
+                    <div><img src="./image/menu 2.png" alt=""></div>
+                    <div><img src="./image/menu 3.png" alt=""></div>
+                    <div><img src="./image/menu 5.png" alt=""></div>
+                </div>
+            </div>
+
+            <div class="menu_pc1 pc1400">
+                <div><img src="./image/menu 1.png" alt=""></div>
+                <div><img src="./image/menu 2.png" alt=""></div>
+                <div><img src="./image/menu 3.png" alt=""></div>
+                <div><img src="./image/menu 5.png" alt=""></div>
+            </div>
+
+            <div class="kara"></div>
+        </section>
+
+        <!-- セクション5 -->
+        <section class="section5">
+            <p class="tag">MESSAGE</p>
+            <h2>メッセージ</h2>
+
+            <div class="mes">
+                <div class="mes_photo_pc">
+                    <p class="mes_photo"><img src="./image/myway2.jpg" alt=""></p>
+
+                    <p class="mes_info sp">舞WAYマスターとママ</p>
+                </div>
+
+                <div class="mes_text">
+                    <p>
+                        私たちは、皆さんにとって家族の様なお店を日々目指しております。<br>
+                        1人でも、友達とでも、団体でも安心して過ごせる環境を整えてお待ちしております。<br class="pc">
+                        そしてぜひ一度、自慢の音響を音響を体験して見て下さい！
+                    </p>
+                    <p class="mes_text2">優しいママと、天下一品濃いめのマスターがご来店お待ちしております！</p>
+                </div>
+            </div>
+
+            <div class="cicle">
+                <a href="#" class="back"></a>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="sp">
+            <p class="fot_title"><a href="#"><span>舞</span>WAY</a></p>
+
+            <div class="fot_lust ">
+                <div><a href="https://www.instagram.com/my_way.405?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./image/icons8-インスタグラム-50のコピー.png" alt=""></a></div>
+
+                <img src="./image/white 2.png" alt="" class="fot_ilust">
+            </div>
+
+            <p class="copy">©2024 myway</p>
+        </footer>
+
+        <div class="fot_pc pc">
+            <p class="fot_title"><a href="#"><span>舞</span>WAY</a></p>
+
+            <div class="fot_flex">
+                <div class="fot_phone">
+                    <p>予約やお問い合わせ等、お気軽にご相談ください！ <br>
+                    <span>000-0000-0000</span></p>
+                </div>
+
+                <div class="fot_lust ">
+                    <div><a href="https://www.instagram.com/my_way.405?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./image/icons8-インスタグラム-50のコピー.png" alt=""></a></div>
+
+                    <img src="./image/white 2.png" alt="" class="fot_ilust">
+                </div>
+            </div>
+
+            <p class="copy">©2024 myway</p>
+        </div>
+    </main>
+
+    <script>
+    $(".slider").slick({
+        autoplay:true,
+        autoplaySpeed:0,
+        speed:4100,
+        slidesToShow:2,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        cssEase: "linear",
+        arrows:false,
+    })
+    
+    $(".slider-menu").slick({
+        speed:1000,
+        dots:true,
+        arrows:true,
+        centerMode:true,
+        slidesToShow:2,
+        valiableWidth:true,
+        responsive:[{
+            breakpoint:660,
+            settings:{
+                slidesToShow:1,
+                arrows:false,
+            }
+        }]
+    })
+
+    $(window).on('scroll load',function(){
+        var scroll = $(this).scrollTop();   
+        var windowHeight = $(window).height();
+    $('.fadeIn').each(function(){
+        var cntPos = $ (this).offset().top;
+    if(scroll > cntPos - windowHeight + windowHeight / 3){
+        $(this).addClass('active')
+    }
+    });
+    });
+
+    $(".nav_item").click(function(){
+        $(".drawer_open").trigger("click");
+    });
+
+    // pc用
+    $(".slider2").slick({
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 4100,
+    slidesToShow: 3,       
+    cssEase: "linear",
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    arrows:false,
+    })
+    </script>
+</body>
+</html>
