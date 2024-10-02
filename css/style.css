@@ -552,7 +552,7 @@ dl,dt,dd{
 }
 .slider-menu{
     width: 80%;
-    margin: 40px auto;
+    margin: 20px auto;
     padding-bottom: 10px;
 }
 .slider-menu img{
@@ -589,13 +589,13 @@ dl,dt,dd{
     height: auto;
     margin-top: 20px;
 }
-.mes_info{
+/* .mes_info{
     color: white;
     margin: 10px auto;
     width: 50%;
     display: flex;
     justify-content: flex-end;
-}
+} */
 .mes_text{
     color: white;
     text-align: center;
@@ -818,6 +818,12 @@ footer{
         font-size: 110%;
     }
 
+    /* メニュー */
+    .menu_pc1 img{
+        width: 300px;
+        height: auto;
+    }
+
     /* フッター */
     .fot_pc{
         background-color: #727272;
@@ -859,10 +865,22 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 20px auto;
+        margin: 40px auto;
     }
     .menu_pc1 div{
         margin: 0 10px;
+    }
+}
+
+
+@media screen and (max-width:374px){
+    .logo_white{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo_white img{
+        width: 90%;
     }
 }
 
